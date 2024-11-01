@@ -18,10 +18,29 @@ public class GameManager : MonoBehaviour
     public GameObject player;
 
 
- 
+    private PauseControl pauseControl;
+
+    public bool isDoubleSpeed = false;
+
+    public void ToggleDoubleSpeed()
+    {
+        if (isDoubleSpeed)
+        {
+            Time.timeScale = 1;
+            isDoubleSpeed = false;
+        }
+        else
+        {
+            Time.timeScale = 2;
+            isDoubleSpeed = true;
+        }
+    }
+
     void Awake()
     {
         instance = this;
+
+        pauseControl = GetComponent<PauseControl>();
     }
 
 
@@ -31,12 +50,37 @@ public class GameManager : MonoBehaviour
 
         if (Input.GetButtonDown("Cancel"))
         {
-            if (menuSet.activeSelf)
-                menuSet.SetActive(false);
-            else
-                menuSet.SetActive(true);
+            
+            ToggleMenuAndPause();
+
+            //if (menuSet.activeSelf)
+            //    menuSet.SetActive(false);
+            //else
+            //    menuSet.SetActive(true);
 
         }
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            ToggleDoubleSpeed();
+        }
+    }
+
+    public void ToggleMenuAndPause()
+    {
+        if (menuSet.activeSelf)
+        {
+            menuSet.SetActive(false);
+            pauseControl.pauseBtn();
+        }
+        else
+        {
+            menuSet.SetActive(true);
+            pauseControl.pauseBtn();
+
+
+        }
+
     }
 
     public void AddMoney(int amount)

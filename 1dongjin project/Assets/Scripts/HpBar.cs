@@ -13,7 +13,7 @@ public class HpBar : MonoBehaviour
 
     void Start()
     {
-        hpbar.value = (float)curHp / (float)maxHp;
+        //hpbar.value = (float)curHp / (float)maxHp;
     }
 
     private void Update()
