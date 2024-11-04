@@ -23,7 +23,7 @@ public class ItemSpawner : MonoBehaviour
         switch (randomValue)
         {
             case 0:
-                itemSpawnPos = new Vector2(transform.position.x, -25f);
+                itemSpawnPos = new Vector2(transform.position.x, 0f);
                 break;
 
             

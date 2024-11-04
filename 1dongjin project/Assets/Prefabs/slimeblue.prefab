@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8875144702959412171}
   - component: {fileID: 4381784226311126503}
   - component: {fileID: 7953558113765956426}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -85,7 +85,7 @@ GameObject:
   m_Component:
   - component: {fileID: 685450219071818971}
   - component: {fileID: 8479678673578043457}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: slime
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -152,7 +152,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7762331414536313458}
   - component: {fileID: 7157117613097135899}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -242,7 +242,7 @@ GameObject:
   - component: {fileID: 1735062754686804086}
   - component: {fileID: 8153942794038805031}
   - component: {fileID: 3806741051286014381}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -319,7 +319,7 @@ GameObject:
   - component: {fileID: 1807171118594676341}
   - component: {fileID: 105470372903817222}
   - component: {fileID: 8361307971222386758}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -433,7 +433,7 @@ GameObject:
   - component: {fileID: 4187069009999350250}
   - component: {fileID: 8759095858444862948}
   - component: {fileID: 7881847606996445052}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -506,7 +506,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2096706525059726262}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -543,7 +543,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7202087110189058926}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Handle Slide Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -583,7 +583,7 @@ GameObject:
   - component: {fileID: 7962622033550156628}
   - component: {fileID: 2286812784436024318}
   - component: {fileID: 7898422546975532433}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: slimeblue
   m_TagString: Enemy
   m_Icon: {fileID: 0}
