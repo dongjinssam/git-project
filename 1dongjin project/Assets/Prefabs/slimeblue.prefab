@@ -582,6 +582,7 @@ GameObject:
   - component: {fileID: 2873526565098347127}
   - component: {fileID: 7962622033550156628}
   - component: {fileID: 2286812784436024318}
+  - component: {fileID: 2857029860185137161}
   - component: {fileID: 7898422546975532433}
   m_Layer: 6
   m_Name: slimeblue
@@ -671,10 +672,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fafcc5d19445704bb549ca73f50f65c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  curHp: 10
-  maxHp: 10
-  moneyToGive: 100
+  health: 100
+  damage: 10
+  attackSpeed: 1
+  gold: 100
   healthBarFill: {fileID: 0}
+  scanner: {fileID: 0}
 --- !u!58 &2286812784436024318
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -710,6 +713,33 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 3.73
+--- !u!50 &2857029860185137161
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6838295896844097564}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!114 &7898422546975532433
 MonoBehaviour:
   m_ObjectHideFlags: 0

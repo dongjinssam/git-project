@@ -49,6 +49,25 @@ public class SlimGgreen : MonoBehaviour
     public Scanner scanner;
 
 
+    public GameObject projectilePrefab;
+    public Transform firePoint;
+
+
+    public void FireProjectile()
+    {
+        GameObject projectile = Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
+        Projectile projScript = projectile.GetComponent<Projectile>();
+       projScript.damage = damage;
+
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            FireProjectile();
+        }
+    }
     // 체력, 공격력, 공격속도를 증가시키기 위한 함수들
     public void IncreaseHealth(float amount)
     {
@@ -66,12 +85,18 @@ public class SlimGgreen : MonoBehaviour
     }
 
 
+    public float GetPowerLevel()
+    {
+        return health * 0.5f + damage * 2f + attackSpeed * 10f;
+    }
 
 
     void Awake()
     {
         scanner = GetComponent<Scanner>();    
     }
+
+
     void Start()
     {
         // 체력 초기화 및 HP 바 설정
@@ -98,10 +123,7 @@ public class SlimGgreen : MonoBehaviour
         //healthBarFill.localScale = new Vector3(healthRatio, healthBarFill.localScale.y, healthBarFill.localScale.z);
     }
 
-    public void Caught()
-    {
-        // MONEY 추가 기능 구현 예정
-    }
+  
 
 
     public void UpgradeHealth()
