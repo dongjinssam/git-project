@@ -6,10 +6,10 @@ using UnityEngine.UI;
 public class HpBar : MonoBehaviour
 {
     [SerializeField]
-    private Slider hpbar;
+    //private Slider hpbar;
 
-    private float maxHp = 100;
-    private float curHp = 100;
+    //private float maxHp = 100;
+    //private float curHp = 100;
 
     void Start()
     {
@@ -18,15 +18,15 @@ public class HpBar : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            curHp -= 10;
-        }
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    curHp -= 10;
+        //}
     }
 
     private void HandleHp()
     {
-        hpbar.value = (float)curHp / (float)maxHp;
+        //hpbar.value = (float)curHp / (float)maxHp;
     }
 
 }

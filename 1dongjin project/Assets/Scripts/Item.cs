@@ -11,7 +11,7 @@ public class Item : MonoBehaviour
 
     void Start()
     {
-        Destroy(gameObject, 10f);
+     //   Destroy(gameObject, 10f);
     }
 
 

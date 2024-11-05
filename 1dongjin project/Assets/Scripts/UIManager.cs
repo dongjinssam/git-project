@@ -14,7 +14,7 @@ public class UIManager : MonoBehaviour
     void Update()
     {
 
-        goldText.text = "Gold : " + slime.gold;
+        goldText.text = "Gold : " + SlimGgreen.gold;
 
         powerLevelText.text = "Power : " + slime.GetPowerLevel().ToString("F2");
     }

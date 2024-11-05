@@ -38,8 +38,12 @@ public class SlimGgreen : MonoBehaviour
     public float health = 100f;   // 기본 체력
     public float damage = 10f;    // 기본 공격력
     public float attackSpeed = 1f; // 기본 공격 속도
-    public int gold = 100;         // 게임 골드
-                                  
+    public static int gold = 500;         // 게임 골드
+
+    public float maxHealth = 100;
+
+    public float defense = 1.0f;
+
     //public int curHp;
                                    //  public int maxHp;
                                    //  public int moneyToGive;
@@ -52,6 +56,13 @@ public class SlimGgreen : MonoBehaviour
     public GameObject projectilePrefab;
     public Transform firePoint;
 
+    public bool isPlayer;
+
+    public void AddGold(int amount)
+    {
+        gold += amount;
+        Debug.Log("골드 획득 : " + amount + " | 현재 골드: " + gold);
+    }
 
     public void FireProjectile()
     {
@@ -63,11 +74,14 @@ public class SlimGgreen : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (isPlayer && Input.GetKeyDown(KeyCode.Space))
         {
             FireProjectile();
+            
         }
     }
+
+
     // 체력, 공격력, 공격속도를 증가시키기 위한 함수들
     public void IncreaseHealth(float amount)
     {
@@ -87,13 +101,14 @@ public class SlimGgreen : MonoBehaviour
 
     public float GetPowerLevel()
     {
-        return health * 0.5f + damage * 2f + attackSpeed * 10f;
+        return health * 0.5f + damage * 3f + attackSpeed * 5f + defense*5f;
     }
 
 
     void Awake()
     {
-        scanner = GetComponent<Scanner>();    
+        scanner = GetComponent<Scanner>();
+        if (firePoint == null) firePoint = transform;
     }
 
 
