@@ -662,6 +662,8 @@ MonoBehaviour:
   health: 50
   damage: 10
   attackSpeed: 1
+  maxHealth: 100
+  defense: 1
   healthBarFill: {fileID: 0}
   scanner: {fileID: 0}
   projectilePrefab: {fileID: 0}
