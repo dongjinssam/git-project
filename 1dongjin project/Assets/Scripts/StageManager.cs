@@ -14,6 +14,7 @@ public class StageManager : MonoBehaviour
     public Text stageText;
     public GameObject winUI;
 
+    public SlimGgreen slimeblue;
 
     private void Start()
     {
@@ -44,7 +45,7 @@ public class StageManager : MonoBehaviour
         UpdateStageUI();
     }
 
-    private void UpdateStageUI()
+   void UpdateStageUI()
     {
         stageText.text = "Stage: " + stage;
     }
@@ -54,6 +55,12 @@ public class StageManager : MonoBehaviour
         winUI.SetActive(true);   // 승리 UI 활성화
         Time.timeScale = 0;      // 게임 정지
         Debug.Log("게임 승리! 모든 스테이지를 완료했습니다.");
+    }
+
+    public void Die()
+    {
+        EnemyDefeated();
+        Destroy(gameObject);
     }
 }
 

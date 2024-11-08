@@ -69,6 +69,7 @@ public class EnemySlime : MonoBehaviour
         if (health <= 0)
         {
             slime.AddGold(goldReward);
+         
             StartCoroutine(DestroySlowly());
         }
     }
